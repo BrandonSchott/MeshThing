@@ -30,6 +30,11 @@ public class PlayerControl : MonoBehaviour
 
         cameraPoint.transform.position = transform.position;
 
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }    
+
         if(Input.GetMouseButton(1))
         {
             transform.Rotate(Vector3.up * mouseX * 200 * Time.deltaTime);
